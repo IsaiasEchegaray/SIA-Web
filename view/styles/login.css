@@ -9,7 +9,7 @@
             font-family: 'Play', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('../recursos/image.jpg') no-repeat center center fixed;
+            background: url('../resources/image.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
