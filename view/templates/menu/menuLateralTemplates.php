@@ -15,7 +15,10 @@
                     <div id="sidebran" class="sidebar-brand">
                         <form action="../../../controller/dispacher.php" method="post">
                             <input type="hidden" id="accion" name="accion" value="home">
-                            <input type="submit" class="material-icons-outlined" value="menu"> Menu
+                            <button type="submit" class="sidebar-list-item-button">
+                                <span class="material-icons-outlined icon-bg">menu</span>
+                                <span class="text-label">Inicio</span>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -24,19 +27,28 @@
                     <li id="list-parcelas" class="sidebar-list-item" >
                         <form action="../../../controller/dispacher.php" method="post">
                             <input type="hidden" id="accion" name="accion" value="listarParcelas">
-                            <input type="submit" class="material-icons-outlined" value="local_florist"> Parcelas
+                            <button type="submit" class="sidebar-list-item-button">
+                                <span class="material-icons-outlined icon-bg">local_florist</span>
+                                <span class="text-label">Parcelas</span>
+                            </button>
                         </form>
                     </li>
                     <li id="list-productores" class="sidebar-list-item">
                         <form action="../../../controller/dispacher.php" method="post">
                             <input type="hidden" id="accion" name="accion" value="listarProductores">
-                            <input type="submit" class="material-icons-outlined" value="people"> Productores
+                            <button type="submit" class="sidebar-list-item-button">
+                                <span class="material-icons-outlined icon-bg">people</span>
+                                <span class="text-label">Productores</span>
+                            </button>
                         </form>
                     </li>
                     <li id="list-bitacoras" class="sidebar-list-item">
                         <form action="../../../controller/dispacher.php" method="post">
                             <input type="hidden" id="accion" name="accion" value="listarBitacoras">
-                            <input type="submit" class="material-icons-outlined" value="app_registration"> Bitacoras
+                            <button type="submit" class="sidebar-list-item-button">
+                                <span class="material-icons-outlined icon-bg">app_registration</span>
+                                <span class="text-label">Bitacoras</span>
+                            </button>
                         </form>
                     </li>
                     <li id="list-archivos" class="sidebar-list-item">

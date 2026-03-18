@@ -107,6 +107,21 @@ body{
     cursor: pointer;
 }
 
+.sidebar-list-item-button {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    align-items: center;
+    gap: 10px;
+    color: var(--blanco);
+    font-weight: 700;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 .sidebar-responsive {
     display: inline !important;
     position: absolute;

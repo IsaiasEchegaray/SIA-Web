@@ -38,13 +38,13 @@ $rs = $_SESSION['rs'];
                 </div>
 
                 <!-- Lista de tarjetas -->
-                <div class="cards-list">
-
-                    <div class="cards-list">
-
+                <div class="cards-list" id="bitacoras-container">
                     <?php 
                         foreach ($rs['contenido'] as $bitacora) {
-                            echo '<div class="parcela-card">';
+                            echo '<div class="parcela-card" data-nombre="' . strtolower(htmlspecialchars($bitacora['nombreBitacora'])) 
+                                    . '" data-productor="' . strtolower(htmlspecialchars($bitacora['nombre'])) 
+                                    . '" data-fecha="' . strtolower(htmlspecialchars($bitacora['fechaInicio'])) . '">';
+
                             echo '    <div class="card-number">'. htmlspecialchars($bitacora['idBita']) . '</div>';
                             echo '    <div class="card-accent"></div>';
                             echo '    <div class="card-info">';
@@ -71,14 +71,9 @@ $rs = $_SESSION['rs'];
                     ?>
 
                 </div>
-
-
-                </div>
-
-
             </main>
         </div>
 
-        <script src="../recursos/script.js"></script>
+        <script src="../../scripts/script.js"></script>
     </body>
 </html>

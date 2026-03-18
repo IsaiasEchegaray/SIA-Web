@@ -37,17 +37,23 @@ $rs = $_SESSION['rs'];
                     </div>
                 </div>
 
+                <div id="parcelas-container" class="cards-list">
                 <?php 
-
+                    $municipios = include '../../resources/strings/municipios.php';
                     foreach ($rs['contenido'] as $parcela) {
-                        echo '<div class="parcela-card">';
+
+                        echo '<div class="parcela-card" data-nombre="' . strtolower(htmlspecialchars($parcela['nombre'])) 
+                                . '" data-municipio="' . strtolower(htmlspecialchars($parcela['municipio'])) 
+                                . '" data-localidad="' . strtolower(htmlspecialchars($parcela['localidad'])) . '">';
+
                         echo '    <div class="card-number">'. htmlspecialchars($parcela['idParcela']) . '</div>';
                         echo '    <div class="card-accent"></div>';
                         echo '    <div class="card-info">';
                         echo '        <div class="info-title">' . htmlspecialchars($parcela['nombre']) . '</div>';
                         echo '        <div>';
                         echo '            <div class="info-label">Municipio</div>';
-                        echo '            <div class="info-value">' . htmlspecialchars($parcela['municipio']) . '</div>';
+                        echo '            <div class="info-value">' 
+                                            . (isset($municipios['municipios'][$parcela['municipio']]) ? htmlspecialchars($municipios['municipios'][$parcela['municipio']]) : 'No especificado') . '</div>'; 
                         echo '        </div>';
                         echo '        <div>';
                         echo '            <div class="info-label">Localidad</div>';
@@ -62,13 +68,13 @@ $rs = $_SESSION['rs'];
                                         . '</div>';
                         echo '    </form>';
                         echo '</div>';
-                        echo '<br>';
                     }
                 ?>
+                </div>
 
             </main>
         </div>
 
-        <script src="../recursos/script.js"></script>
+        <script src="../../scripts/script.js"></script>
     </body>
 </html>

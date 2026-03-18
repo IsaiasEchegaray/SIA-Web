@@ -37,12 +37,13 @@ $rs = $_SESSION['rs'];
                 </div>
 
                 <!-- Lista de contenedores -->
-                <div class="cards-list">
+                <div class="cards-list" id="productores-container">
 
                     <?php 
                         foreach ($rs['contenido'] as $productor) {
-                        echo '<div class="parcela-card">';
-                        echo '    <div class="card-number">'. htmlspecialchars($productor['idProductor']) . '</div>';
+                        echo '<div class="parcela-card" data-nombre="' . strtolower(htmlspecialchars($productor['nombre'])) 
+                                . '" data-curp="' . strtolower(htmlspecialchars($productor['curp'])) . '">';
+
                         echo '    <div class="card-accent"></div>';
                         echo '    <div class="card-info">';
                         echo '        <div>';
@@ -75,6 +76,6 @@ $rs = $_SESSION['rs'];
             </main>
 
         </div>
-        <script src="../recursos/script.js"></script>
+        <script src="../../scripts/script.js"></script>
     </body>
 </html>
